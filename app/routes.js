@@ -1,4 +1,13 @@
 module.exports = function(app, passport) {
+	/**
+	 * Libraries
+	 */
+	var express = require('express');
+	var path = require('path');
+
+	//app.use("public", express.static(__dirname + 'public'));
+	app.use(express.static(path.join(__dirname, 'public')));
+
 
 	// =====================================
 	// HOME PAGE (with login links) ========
@@ -94,14 +103,20 @@ module.exports = function(app, passport) {
   passport.authenticate('google', {
     successRedirect : '/profile',
     failureRedirect : '/'
-  }));
 
+  }));
 	// =====================================
 	// LOGOUT ==============================
 	// =====================================
 	app.get('/logout', function(req, res) {
 		req.logout();
 		res.redirect('/');
+	});
+	// =====================================
+	// BANNER ========
+	// =====================================
+	app.get('/banner', function(req, res) {
+		res.render('banner.jade'); // load the banner.ejs file
 	});
 };
 
