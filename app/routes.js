@@ -5,9 +5,7 @@ module.exports = function(app, passport) {
 	var express = require('express');
 	var path = require('path');
 
-	//app.use("public", express.static(__dirname + 'public'));
-	app.use(express.static(path.join(__dirname, 'public')));
-
+    app.use(express.static('public'));
 
 	// =====================================
 	// HOME PAGE (with login links) ========
