@@ -1,5 +1,11 @@
 $(function() {
 
+  setTimeout(function(){
+    google.load('visualization',
+    '1', {'callback': function () {},
+    'packages':['corechart']})},
+  2000);
+
   function setColor(e) {
 
     // --- Rating Attributes
@@ -70,13 +76,11 @@ $(function() {
     $('#rating').hide();
   }
 
-  $('.save-rating').on('click', function(e){
+  $('.save-rating').on('click', function(e) {
     e.preventDefault();
-    setTimeout(function(){
-      google.load('visualization',
-      '1', {'callback': drawChart,
-      'packages':['corechart']})},
-    2000);
+    drawChart();
   });
+
+
 
 });
