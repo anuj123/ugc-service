@@ -10,8 +10,54 @@ html
        load bootstrap css 
     link(rel='stylesheet', href='/css/styles.css')
     //
-  body
-    .container
-      .col-sm-6.col-sm-offset-3
-        h1 banner
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='/javascript/banner/banner.js')
 
+  body
+    #banner.yp-widget-container
+      section.collapsed
+        header
+          | Earn Power Points and Get Rewards using&nbsp;
+          span.underline.branding YP
+          | !
+        article
+          strong.bracket.left [
+          strong.bracket.right ]
+        footer
+          a &raquo; find out how!
+
+      section.expanded
+        ul.clearfix
+          li.reviewer
+            header.light Become the Reviewer of the Day!
+            article.light review and rate business
+              nav
+                  a
+                    strong Start Now!
+          li.photo
+            header.light Win Photo of the Week!
+            article.light upload and share photos of businesses.
+              nav
+                  a
+                    strong Start Now!
+          li.mybook
+            header.light Create mybook Collection of the Month!
+            article.light start sharing your mybook collection.
+              nav
+                a
+                  strong Start Now!
+          li.ask
+            header.light Ask the Experts on mybook!
+            article.light start a discussion. ask for advice.
+              nav
+                a
+                  strong Start Now!
+          li.points
+            header.light Earn Coupons and Points!
+            article.light report listing's new hours, location, and other updates.
+              nav
+                a
+                  strong Start Now!
+          li
+            header.light
+            article.light

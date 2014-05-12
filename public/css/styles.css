@@ -1,1 +1,154 @@
-h1 { color: red; }
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* font face */
+@font-face {
+    font-family: 'proxima-nova-regular';
+    src: url('../fonts/ProximaNova-Reg-webfont.eot');
+    src: url('../fonts/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ProximaNova-Reg-webfont.woff') format('woff'),
+         url('../fonts/ProximaNova-Reg-webfont.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Reg-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-bold';
+    src: url('../fonts/ProximaNova-Sbold-webfont.eot');
+    src: url('../fonts/ProximaNova-Sbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ProximaNova-Sbold-webfont.woff') format('woff'),
+         url('../fonts/ProximaNova-Sbold-webfont.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Sbold-webfont.svg#proxima_nova_rgbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima-nova-light';
+    src: url('../fonts/ProximaNova-Thin-webfont.eot');
+    src: url('../fonts/ProximaNova-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ProximaNova-Thin-webfont.woff') format('woff'),
+         url('../fonts/ProximaNova-Thin-webfont.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Thin-webfont.svg#proxima_nova_ltlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* utility */
+
+strong { font-family: 'proxima-nova-bold', 'helvetica', 'arial', 'sans-serif'; }
+.light { font-family: 'proxima-nova-light', 'helvetica', 'arial', 'sans-serif'; }
+.underline { border-bottom: 2px solid #ffdd00; display: inline-block; line-height: 0.8em; }
+.branding { font-size: 1.2em; }
+
+.clearfix { zoom: 1; }
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        content: "";
+        /* Fixes Opera/contenteditable bug:
+        // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952 */
+        line-height: 0;
+        zoom: 1;
+    }
+    .clearfix:after {
+        clear: both;
+        zoom: 1;
+    }
+
+.hide { .display: none; }
+
+/* styles */
+.yp-widget-container {
+    width: 1000px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'proxima-nova-regular', 'helvetica', 'arial', 'sans-serif';
+}
+
+#banner {
+    background: #2f2f2f;
+}
+    #banner .collapsed {
+        height: 55px;
+        line-height: 55px;
+        padding: 0 20px;
+    }
+        #banner .collapsed header,
+        #banner .collapsed article { float: left; }
+
+        #banner .collapsed article {
+            width: 475px;
+            margin: 0 34px;
+            font-size: 30px;
+            line-height: 55px;
+            background: url('../images/banner-icons-spritesheet.png') no-repeat 55px 12px, url('../images/banner-icons-spritesheet.png') no-repeat 136px -43px, url('../images/banner-icons-spritesheet.png') no-repeat 217px -98px, url('../images/banner-icons-spritesheet.png') no-repeat 298px -153px, url('../images/banner-icons-spritesheet.png') no-repeat 384px -208px;
+        }
+            #banner .collapsed article .left { float: left; }
+            #banner .collapsed article .right { float: right; }
+
+        #banner .collapsed footer {
+            float: right;
+            font-size: 14px;
+        }
+        #banner .collapsed footer a {
+            color: #fff;
+        }
+
+    #banner .expanded {
+        display: none;
+    }
+        #banner .expanded ul {
+            border-top: 2px solid #4f4f4f;
+            border-bottom: 2px solid #4f4f4f;
+            border-right: 4px solid #4f4f4f;;
+        }
+        #banner .expanded li {
+            position: relative;
+            width: 50%;
+            height: 80px;
+            border: 4px solid #4f4f4f;
+            border-top-width: 2px;
+            border-bottom-width: 2px;
+            border-right-width: 0;
+            float: left;
+            padding: 10px 0 0 125px;
+            background: #787878 url('../images/banner-icons-spritesheet.png') no-repeat -100px 10px;
+        }
+            #banner .expanded li header {
+                font-size: 18px;
+            }
+            #banner .expanded li article {
+                font-size: 0.9em;
+            }
+            #banner .expanded li nav a {
+                display: block;
+                width: 100px;
+                height: 20px;
+                margin: 6px 0;
+                font-size: 0.8em;
+                line-height: 20px;
+                background: #fd0;
+                color: #000;
+                text-align: center;
+            }
+            #banner .expanded li.reviewer {
+                background-position: 28px -252px;
+            }
+            #banner .expanded li.photo {
+                background-position: 28px -332px;
+            }
+            #banner .expanded li.mybook {
+                background-position: 27px -412px;
+            }
+            #banner .expanded li.ask {
+                background-position: 28px -492px;
+            }
+            #banner .expanded li.points {
+                background-position: 26px -572px;
+            }
+            #banner .expanded li nav a:before {
+                content: "\00BB ";
+            }
