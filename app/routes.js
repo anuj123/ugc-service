@@ -116,6 +116,16 @@ module.exports = function(app, passport) {
 	app.get('/banner', function(req, res) {
 		res.render('banner.jade'); // load the banner.ejs file
 	});
+
+  // ================================
+  // RATINGS =======
+  // ===============================
+
+
+  app.get('/ratings', function(req, res) {
+      res.render('rating.jade');
+  });
+
 };
 
 // route middleware to make sure a user is logged in
