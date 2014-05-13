@@ -15,33 +15,35 @@ html
 
   body
     .container
-      ul#rating
-        li
-            .property-name  Ambience
-            .property
-            .text-feedback
-        li
-            .property-name  Parking
-            .property
-            .text-feedback
-
-        li
-            .property-name  Price
-            .property
-            .text-feedback
-
-        li
-            .property-name  Service
-            .property
-            .text-feedback
-
-        li
-            .property-name  Food
-            .property
-            .text-feedback
-
-        li
-            input.save-rating(type='button', value='save')
+      form.save_rating(action='/save_rating')
+        ul#rating
+          li
+              .property-name  Ambience
+              .property
+              .text-feedback
+              input(type='hidden', name='Ambience', value='')
+          li
+              .property-name  Parking
+              .property
+              .text-feedback
+              input(type='hidden', name='Parking', value='')
+          li
+              .property-name  Price
+              .property
+              .text-feedback
+              input(type='hidden', name='Price', value='')
+          li
+              .property-name  Service
+              .property
+              .text-feedback
+              input(type='hidden', name='Service', value='')
+          li
+              .property-name  Food
+              .property
+              .text-feedback
+              input(type='hidden', name='Food', value='')
+          li
+              input(type='submit', value='save')
 
       #chart_div(style='width 900px; height: 500px;')
 
