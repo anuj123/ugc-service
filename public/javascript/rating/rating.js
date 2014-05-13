@@ -14,35 +14,39 @@ $(function() {
     var sliderValue = $target.val();
     console.log(sliderValue);
     switch(true) {
+      case 0 == sliderValue :
+        $target.css('background-color', '');
+        $target.siblings('.text-feedback').html('dont know');
+        break;
       case 0 < sliderValue && sliderValue <= 2 :
-        $target.css('background', 'red');
-        $target.siblings('.text-feedback').html('This is c***');
+        $target.css('background-color', 'red');
+        $target.siblings('.text-feedback').html('thumbs down');
         break;
       case 2 < sliderValue && sliderValue <= 4 :
-        $target.css('background', 'orange');
+        $target.css('background-color', 'orange');
         $target.siblings('.text-feedback').html('its below average');
         break;
       case 4 < sliderValue && sliderValue <= 6 :
-        $target.css('background', 'yellow');
+        $target.css('background-color', 'yellow');
         $target.siblings('.text-feedback').html('its average');
         break;
       case 6 < sliderValue && sliderValue <= 8 :
-        $target.css('background', 'orange');
+        $target.css('background-color', 'orange');
         $target.siblings('.text-feedback').html('its good');
         break;
       case 8 < sliderValue && sliderValue <= 10 :
-        $target.css('background', 'green');
+        $target.css('background-color', 'green');
         $target.siblings('.text-feedback').html('its super duper awesome');
         break;
       defalut:
-        $target.css('background', 'blue');
+        $target.css('background-color', 'grey');
     }
   };
 
   var $sliders = $("#rating .property")
 
   $sliders.noUiSlider({
-    start: 5,
+    start: 0,
     range: {
       'min': 0,
       'max': 10
