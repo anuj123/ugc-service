@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var Comment = mongoose.model('Blog');
+var Blog = require('../models/blog');
 
 
 function get(req, res) {
@@ -20,7 +20,9 @@ function create(req, res) {
       return console.error(err); // we should handle this
     }
 
-    res.redirect( '/ask_experts/' + title );
+    res.render( 'ask_experts/show', {
+        blog: blog
+    });
 
   });
 
@@ -50,7 +52,9 @@ function createComment(req, res) {
           if (err) {
             return console.error(err); // we should handle this
           }
-          res.redirect( '/ask_experts/' + title );
+          res.render( 'ask_experts/show', {
+              blog: blog
+          });
       });
   });
 

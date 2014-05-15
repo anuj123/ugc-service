@@ -1,4 +1,4 @@
-var askExperts = require('/handlers/ask_experts.js');
+var askExperts = require('./handlers/ask_experts.js');
 module.exports = function(app, passport) {
 	/**
 	 * Libraries

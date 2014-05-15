@@ -1,6 +1,5 @@
 div.addCommentForm
-    - var url = "/ask_experts/create"
-    form( method="post", action="{url}")
+    form( method="post", action="/ask_experts/create")
         div
             div
                 span.label Name :
@@ -9,7 +8,7 @@ div.addCommentForm
                 span.label Description :
                 textarea(name="description")
              div
-                span.label Name :
+                span.label Author :
                 input(type="text", class="nameTxt", name="author")
             div#addBlogSubmit
                 input(type="submit", value="Save")
