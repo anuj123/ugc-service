@@ -1,0 +1,15 @@
+div.addCommentForm
+    - var url = "/ask_experts/create"
+    form( method="post", action="{url}")
+        div
+            div
+                span.label Name :
+                input(type="text", class="nameTxt", name="title")
+            div
+                span.label Description :
+                textarea(name="description")
+             div
+                span.label Name :
+                input(type="text", class="nameTxt", name="author")
+            div#addBlogSubmit
+                input(type="submit", value="Save")

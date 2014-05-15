@@ -1,0 +1,34 @@
+//extends layout
+
+block content
+  h1= blog.title
+  h2= blog.description
+  h3= blog.author
+  h4= blog.created
+
+  br
+  br
+  #comments
+    - each comment in blog.comments
+      div.comment
+        div.name= comment.name
+        div.posted= comment.posted
+        br
+        div.description= comment.description
+        hr
+
+  div.addCommentForm
+        - var url = "/ask_experts/create/comment/" + blog.title
+        form( method="post", action="{url}")
+            div
+                div
+                    span.label Name :
+                    input(type="text", class="nameTxt", name="name")
+                div
+                    span.label Comment :
+                    textarea(name="description")
+                 div
+                    input(type="hidden", class="blogTitle", name="blogTitle", value=blog.title)
+                div#addCommentSubmit
+                    input(type="submit", value="Save")
+
